@@ -7,8 +7,8 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const basePromptPrefix = `
-Write me a detailed table of contents for a blog post with the title below.
-Title:
+Summerize and provide dates of these Historicals Envents provided below
+Events:
 `;
 
 const generateAction = async (req, res) => {
@@ -38,7 +38,7 @@ const generateAction = async (req, res) => {
         // I set a higher temperature for this one. Up to you!
         temperature: 0.85,
         // I also increase max_tokens.
-        max_tokens: 1250,
+        max_tokens: 800,
     });
 
     // Get the output
